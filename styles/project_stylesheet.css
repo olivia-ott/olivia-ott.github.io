@@ -1,0 +1,133 @@
+.t-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
+.body-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.copy {
+  min-width: 25%;
+  padding-top: 20px;
+  margin-right: 45px;
+  position: sticky;
+  top: 0;
+}
+
+.title {
+  color: #0075c9;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+p { 
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: #0075c9;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+
+/*grid stuff*/
+
+
+.grid { 
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 20px;
+  align-items: stretch;
+  }
+  
+.grid img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+
+
+.link-wrap {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.link-wrap a {
+  text-decoration: none;
+  text-align: center;
+  margin-right: 25px;
+  margin-left: 25px;
+  width: 100px;
+  color: #fd495c;
+  border: 2px solid #fd495c;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: transparent;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  transition: color .3s;
+  transition: background .3s;
+}
+
+.link-wrap a:hover {
+  color: white;
+  background: #0075c9;
+  border: 2px solid #0075c9;
+  cursor: pointer;
+}
+
+
+/*MEDIA*/
+
+@media (max-width: 900px) {
+
+  .body-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .copy {
+ 
+    margin-left: 32px;
+    margin-right: 32px;
+    position: static;
+    padding-top: 0px;
+  }
+
+  .grid { 
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0px;
+  align-items: stretch;
+  }
+
+  
+}

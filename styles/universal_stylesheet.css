@@ -1,0 +1,327 @@
+/*CSS ALL HEADER*/
+
+body {
+  margin: 0;
+  position: relative;
+  background: #f9f9f3;
+}
+
+@font-face
+{font-family: 'butlerbold';
+  src: url('../fonts/ButlerBold.eot');
+  src: url('../fonts/ButlerBold.eot?#iefix') format('embedded-opentype'),
+     /*url('/fonts/buckwheat.woff2') format('woff2'),*/
+     url('../fonts/ButlerBold.woff') format('woff'),
+     url('../fonts/ButlerBold.ttf') format('truetype'),
+     url('../fonts/ButlerBold.svg#wf') format('svg');
+}
+
+
+.ButlerBold {
+  font-family: "ButlerBold", sans-serif;
+}
+
+@font-face {font-family: 'Barlow Semi Condensed', sans-serif;}
+
+/*DESKTOP NAVIGATION*/
+
+/*container for entire navbar*/
+.navbar {
+  background: #transparent;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  margin-left: 10%;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.logo img {
+  width: 250px;
+  height: auto;
+}
+
+.nav-links {
+  margin-left: 0px;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+
+/*style for list items*/
+.nav-links ul, nav-links li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/*ul is the container for the list*/
+.nav-links ul {
+  display: flex;
+}
+
+/*li is the containers for the individual links*/
+.nav-links li {
+  padding-left: 35px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+/*a is the individual links*/
+.nav-links ul a {
+  color: #0075c9;
+  text-decoration: none;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  transition: color .3s;
+}
+
+
+
+/*hover effects for header links*/
+.nav-links ul a:hover, .nav-links ul a:focus {
+  background: #transparent;
+  color: #fd495c;
+}
+
+
+/*desktop*/
+@media (min-width: 661px) {
+  .burger {
+    display: none;
+  }
+}
+
+/*phone*/
+@media (max-width: 660px) {
+  .nav-links {
+    display: none;
+  }
+  
+  
+.logo {
+  margin-left: 30px;
+}
+
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+/*burger begins for phone*/
+button {
+  margin-left: 0%;
+  margin-right: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.main-nav-trigger {
+  position: relative;
+  z-index: 1;
+}
+
+.main-nav {
+  width: 100%;
+  padding-top: 20px;
+  background: #fd495c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: .25s ease transform;
+}
+
+.main-nav.expanded {
+  transform: translateX(0%);
+}
+
+.main-nav ul {
+  margin-left: 50px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+.main-nav ul, main nav li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.main-nav ul a {
+  color: #f9f9f3;
+  text-decoration: none;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  transition: color .3s;
+}
+
+.main-nav ul a:hover, .main-nav ul a:focus {
+  background: #transparent;
+  color: #0075c9;
+}
+
+/* Styles for the button animation */
+.tcon {
+  margin-left: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 40px;
+  background: transparent;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; }
+  .tcon > * {
+    display: block; }
+  .tcon:hover, .tcon:focus {
+    outline: none; }
+  .tcon::-moz-focus-inner {
+    border: 0; }
+
+.tcon-menu__lines {
+  display: inline-block;
+  height: 5.71429px;
+  width: 40px;
+  border-radius: 2.85714px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #0075c9;
+  position: relative; }
+  .tcon-menu__lines::before, .tcon-menu__lines::after {
+    display: inline-block;
+    height: 5.71429px;
+    width: 40px;
+    border-radius: 2.85714px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background: #0075c9;
+    content: '';
+    position: absolute;
+    left: 0;
+    -webkit-transform-origin: 2.85714px center;
+    transform-origin: 2.85714px center;
+    width: 100%; }
+  .tcon-menu__lines::before {
+    top: 10px; }
+  .tcon-menu__lines::after {
+    top: -10px; }
+  .tcon-transform .tcon-menu__lines {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8); }
+
+.tcon-menu--xcross {
+  width: auto; }
+  .tcon-menu--xcross.tcon-transform .tcon-menu__lines {
+    background: transparent; }
+    .tcon-menu--xcross.tcon-transform .tcon-menu__lines::before, .tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      top: 0;
+      width: 40px; }
+    .tcon-menu--xcross.tcon-transform .tcon-menu__lines::before {
+      -webkit-transform: rotate3d(0, 0, 1, 45deg);
+      transform: rotate3d(0, 0, 1, 45deg);
+      background: #f9f9f3; }
+    .tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+      -webkit-transform: rotate3d(0, 0, 1, -45deg);
+      transform: rotate3d(0, 0, 1, -45deg);
+      background: #f9f9f3; }
+
+.tcon-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .tcon-visuallyhidden:active, .tcon-visuallyhidden:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+}
+
+
+
+@media (max-width: 325px) { 
+.logo {
+  margin-left: 20px;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+/*burger begins for phone*/
+button {
+  margin-left: 0%;
+  margin-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  }
+}
+/*CSS ALL HEADER*/
+
+
+
+/*CSS ALL FOOTER*/
+
+.footer {
+  background: #transparent;
+  color: #0075c9;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.footer a {
+  line-height: 40px;
+  color: #0075c9;
+  text-decoration: none;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  transition: color .3s;
+}
+
+footer a:hover, .footer a:focus {
+  background: #transparent;
+  color: #fd495c;
+}
+  
+/*CSS ALL FOOTER*/
