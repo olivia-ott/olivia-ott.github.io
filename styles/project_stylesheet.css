@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .copy {
-  min-width: 25%;
+  max-width: 1000px;
   padding-top: 20px;
   margin-right: 45px;
   position: sticky;
@@ -48,7 +48,8 @@ p {
   }
   
 .grid img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 3000px;
   max-height: auto;
 }
 
@@ -101,9 +102,8 @@ p {
   }
 
   .copy {
- 
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 10%;
+    margin-right: 10%;
     position: static;
     padding-top: 0px;
   }
