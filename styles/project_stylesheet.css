@@ -53,6 +53,12 @@ p {
   max-height: auto;
 }
 
+.grid video {
+   width: 100%;
+  max-width: 3000px;
+  max-height: auto;
+}
+
 
 
 .link-wrap {
